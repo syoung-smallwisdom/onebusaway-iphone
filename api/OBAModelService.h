@@ -41,6 +41,16 @@
  */
 - (id<OBAModelServiceRequest>)requestStopForId:(NSString *)stopId
                                completionBlock:(OBADataSourceCompletion)completion;
+
+/**
+ *  Creates a URL to fetch a stop object that is also inflated with additional data for arrival and departure time
+ *
+ *  @param stopId        The string identifier of the stop to be fetched
+ *
+ *  @return The NSURL for the operation
+ */
+- (NSURL*)urlForStopWithArrivalsAndDeparturesForId:(NSString *)stopId;
+
 /**
  *  Makes an asynchronous request to fetch a stop object that is also inflated with additional data for arrival and departure time
  *
